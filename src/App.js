@@ -1,10 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+import './style/style.scss';
+import './style/reset.scss';
 
 function App() {
   return (
     <>
+      Hello
     </>
   );
 }
