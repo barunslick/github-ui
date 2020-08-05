@@ -1,0 +1,35 @@
+@import '../../style/base';
+
+.Profile{
+
+  width: 50%;
+  overflow: hidden;
+  flex: 1;
+  max-width: 280px;
+
+  @include e (heading){
+    white-space: nowrap;
+    color: $ash-gray;
+  }
+
+  @include e(avatar){
+    border-radius: 50%;
+    width: 100%;
+  }
+
+  @include e(avatar-container){
+    margin-top: 32px;
+  }
+
+  @include e(user-details){
+    margin-top: 40px;
+  }
+
+  @include e(user-id){
+    margin-top: 8px;
+  }
+
+  @include e(user-name){
+    color: $pear;
+  }
+}

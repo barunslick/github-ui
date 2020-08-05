@@ -1,1 +1,1 @@
-export const mainUrl = 'api.github.com/users/barunslick';
+export const BASE_URL = 'https://api.github.com/users/barunslick';

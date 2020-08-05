@@ -1,0 +1,13 @@
+@import '../../style/base';
+
+.Repositories{
+  flex: 2;
+  margin-left: 30px;
+  overflow: hidden;
+
+  @include e (heading){
+    white-space: nowrap;
+    color: $ash-gray;
+  }
+
+}

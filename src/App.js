@@ -1,14 +1,16 @@
 import React from 'react';
+import Main from './components/Main/Main';
 
 import './App.css';
-import './style/style.scss';
-import './style/reset.scss';
 
+/**
+ * Main App wrapper.
+ * 
+ * @returns {JSX} 
+ */
 function App() {
   return (
-    <>
-      Hello
-    </>
+    <Main />
   );
 }
 

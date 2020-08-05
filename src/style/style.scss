@@ -6,3 +6,23 @@ html,body{
   background-color: $base-color;
   color: $white;
 }
+
+.MainWrapper{
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 60px;
+
+  @include mq(md){
+    width: 80%;
+  }
+
+  @include mq(md){
+    width: 60%;
+  }
+  
+  .Content{
+    display: flex;
+  }
+}
+
