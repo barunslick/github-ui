@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
@@ -21,6 +21,8 @@ import '../../style/reset.scss';
  */
 function Main(props) {
 
+  const [isLoading, setLoading] = useState(true);
+
   const { setMainData } = props;
 
   useEffect(() => {
@@ -29,21 +31,29 @@ function Main(props) {
 
       if (result) {
         setMainData(result);
+        setLoading(false);
       }
-      
+
     };
 
     fetchData();
 
-  // eslint-disable-next-line
+    // eslint-disable-next-line
   }, []);
 
   return (
     <Router>
       <div className="MainWrapper">
         <div className="Content">
-          <Route path="/" component={Profile} />
-          <Route path="/" component={Repositores} />
+          {isLoading ?
+            <p>Laoding.....</p>
+            :
+            <>
+              <Route path="/" component={Profile} />
+              <Route path="/" component={Repositores} />
+            </>
+          }
+
         </div>
       </div>
     </Router>
