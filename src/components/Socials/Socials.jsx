@@ -77,7 +77,6 @@ function mapStateToProps(state) {
   };
 }
 
-
 /**
  * Take store.dispatch and map it as props to our component.
  *

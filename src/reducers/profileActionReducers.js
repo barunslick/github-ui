@@ -13,7 +13,7 @@ const INITIAL_STATE = {
  * @param {String} action Takes the action that has been dispatched.
  * @returns
  */
-function fetchActionReducer(state = INITIAL_STATE, action) {
+function profileActionReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case profileActions.SET_DATA:
       return {
@@ -38,4 +38,4 @@ function fetchActionReducer(state = INITIAL_STATE, action) {
   }
 }
 
-export default fetchActionReducer;
+export default profileActionReducer;

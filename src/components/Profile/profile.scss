@@ -2,10 +2,14 @@
 
 .Profile{
 
-  width: 50%;
+  width: 100%;
   overflow: hidden;
-  flex: 1;
-  max-width: 280px;
+  
+  @include mq(md){
+    width: 50%;
+    flex: 1;
+    max-width: 280px;
+  }
 
   @include e (heading){
     white-space: nowrap;
@@ -18,7 +22,9 @@
   }
 
   @include e(avatar-container){
+    margin: 0 auto;
     margin-top: 32px;
+    max-width: 300px;
   }
 
   @include e(user-details){

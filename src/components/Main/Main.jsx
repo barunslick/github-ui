@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Profile from '../Profile/Profile';
 import { BASE_URL } from '../../constants/apiUrl';
+import fetchContent from '../../services/githubApi';
 import Repositores from '../Repositoires/Repositores';
 import * as profileActions from '../../actions/profileActions';
-import fetchContent from '../../services/githubApi';
 
 import '../../style/style.scss';
 import '../../style/reset.scss';
