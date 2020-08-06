@@ -70,10 +70,10 @@ function Socials(props) {
  */
 function mapStateToProps(state) {
   return {
-    followersUrl: state.fetch.data.followers_url,
-    followingUrl: state.fetch.data.following_url,
-    followersCount: Object.keys(state.fetch.followers).length,
-    followingCount: Object.keys(state.fetch.following).length,
+    followersUrl: state.mainData.data.followers_url,
+    followingUrl: state.mainData.data.following_url,
+    followersCount: Object.keys(state.mainData.followers).length,
+    followingCount: Object.keys(state.mainData.following).length,
   };
 }
 

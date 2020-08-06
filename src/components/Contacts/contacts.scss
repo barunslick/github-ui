@@ -1,0 +1,27 @@
+@import '../../style/base';
+
+.Contacts{
+
+  margin-top: 40px;
+
+  &>div{
+    margin-top: 10px;
+  }
+
+  &>div:first-child{
+    margin-top: 0px;
+  }
+  span{
+    display: inline-block;
+  }
+  .icons{
+    width: 12px;
+    color: $gray;
+  }
+
+  @include e(text-content){
+    margin-left: 10px;
+    flex: 3;
+    color: $orange;
+  }
+}

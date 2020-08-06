@@ -22,7 +22,7 @@ function Avatar(props) {
  */
 function mapStateToProps(state) {
   return {
-    imageUrl: state.fetch.data.avatar_url
+    imageUrl: state.mainData.data.avatar_url
   };
 }
 

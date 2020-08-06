@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 
 import './repositories.scss';
 import fetchContent from '../../services/githubApi';
-import RepositoryListItem from './RespositoryListItem/RepositoryListItem';
 import * as reposActions from '../../actions/repoActions';
+import RepositoryListItem from './RespositoryListItem/RepositoryListItem';
 
 /**
  * Shows the repositores of the user.
@@ -61,7 +61,7 @@ function Repositores(props) {
  */
 function mapStateToProps(state) {
   return {
-    reposUrl: state.fetch.data.repos_url,
+    reposUrl: state.mainData.data.repos_url,
     reposData: state.repos.reposData,
   };
 }
@@ -80,7 +80,7 @@ function mapDisptachToProps(dispatch) {
 Repositores.propTypes = {
   reposUrl: PropTypes.string,
   setRepos: PropTypes.func,
-  reposData: PropTypes.object,
+  reposData: PropTypes.array,
 };
 
 export default connect(mapStateToProps, mapDisptachToProps)(Repositores);

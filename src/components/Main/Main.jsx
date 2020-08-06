@@ -16,7 +16,7 @@ import '../../style/reset.scss';
 /**
  * Main App wrapper.
  * 
- * @param { Object} props
+ * @param {Object} props
  * @returns {JSX} 
  */
 function Main(props) {

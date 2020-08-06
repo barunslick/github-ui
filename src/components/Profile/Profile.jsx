@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import './profile.scss';
 import Avatar from '../Avatar/Avatar';
 import Socials from '../Socials/Socials';
+import Contacts from '../Contacts/Contacts';
 
 /**
  * Shows the user avatar along with details such as name, followers, and other details.
@@ -14,7 +15,7 @@ import Socials from '../Socials/Socials';
  */
 function Profile(props) {
 
-  const { name, gitId } = props;
+  const { name, gitId, url } = props;
 
   return (
     <div className="Profile">
@@ -23,10 +24,11 @@ function Profile(props) {
         <Avatar className="Profile__avatar" />
       </div>
       <div className="Profile__user-details">
-        <h1 className="Profile__user-name"> {name} </h1>
-        <p className="Profile__user-id"> {gitId}</p>
+        <a href = {url}><h1 className="Profile__user-name"> {name} </h1></a>
+        <a href = {url}><p className="Profile__user-id"> {gitId} </p> </a>
       </div>
       <Socials />
+      <Contacts />
     </div>
   );
 }
@@ -39,14 +41,16 @@ function Profile(props) {
  */
 function mapStateToProps(state) {
   return {
-    name: state.fetch.data.name,
-    gitId: state.fetch.data.login,
+    name: state.mainData.data.name,
+    gitId: state.mainData.data.login,
+    url: state.mainData.data.url,
   };
 }
 
 Profile.propTypes = {
   name: PropTypes.string,
-  gitId: PropTypes.string
+  gitId: PropTypes.string,
+  url: PropTypes.string,
 };
 
 export default connect(mapStateToProps)(Profile);
