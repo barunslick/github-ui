@@ -16,7 +16,7 @@ function Contacts(props) {
 
   return (
     <div className="Contacts">
-      <div><a href={blogLink}><i className="fas fa-link icons"></i><span className="Contacts__text-content">{blogLink}</span></a></div>
+      <div><i className="fas fa-link icons"></i><span className="Contacts__text-content"><a href={`http://${blogLink}`}>{blogLink}</a></span></div>
       <div><i className="fas fa-map-marker-alt icons"></i><span className="Contacts__text-content">{address}</span></div>
     </div>
   );

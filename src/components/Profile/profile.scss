@@ -37,5 +37,11 @@
 
   @include e(user-name){
     color: $pear;
+    
+    a{
+      &:hover {
+        color: darken($color: $pear, $amount: 20%) !important;
+      }
+    }
   }
 }

@@ -24,8 +24,8 @@ function Profile(props) {
         <Avatar className="Profile__avatar" />
       </div>
       <div className="Profile__user-details">
-        <a href = {url}><h1 className="Profile__user-name"> {name} </h1></a>
-        <a href = {url}><p className="Profile__user-id"> {gitId} </p> </a>
+        <h1 className="Profile__user-name"> <a href = {url}>{name}</a> </h1>
+        <p className="Profile__user-id"> <a href = {url}>{gitId}</a> </p>
       </div>
       <Socials />
       <Contacts />
@@ -43,7 +43,7 @@ function mapStateToProps(state) {
   return {
     name: state.mainData.data.name,
     gitId: state.mainData.data.login,
-    url: state.mainData.data.url,
+    url: state.mainData.data.html_url,
   };
 }
 
