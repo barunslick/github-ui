@@ -1,0 +1,34 @@
+@import '../../../style/base';
+
+.FollowerListItem{
+
+  margin-top: 48px;
+  display: flex;
+
+  @include e(avatar-holder){
+    width: 60px;
+  }
+
+  @include e(avatar){
+    width:60px;
+    border-radius: 50%;
+  }
+
+  @include e(user-details){
+    margin-left: 28px;
+    position: relative;
+  }
+
+  @include e(user-id){
+    color: $rose;
+    font-size: 16px;
+    position: absolute;
+    top: 20%;
+
+    a:hover{
+      color: $black;
+      background-color: $pacific-blue;
+    }
+  }
+
+}

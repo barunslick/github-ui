@@ -11,7 +11,7 @@ import './RepositoryListItem.scss';
  * @param {Object} props
  * @returns
  */
-function RepositoryLIstItem(props) {
+function RepositoryListItem(props) {
   return (
     <div className="Repository-list">
       <div className="Repository-list__title">
@@ -31,8 +31,8 @@ function RepositoryLIstItem(props) {
   );
 }
 
-RepositoryLIstItem.propTypes = {
+RepositoryListItem.propTypes = {
   item: PropTypes.object,
 };
 
-export default RepositoryLIstItem;
+export default RepositoryListItem;

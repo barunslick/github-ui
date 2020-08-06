@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Profile from '../Profile/Profile';
 import { BASE_URL } from '../../constants/apiUrl';
 import fetchContent from '../../services/githubApi';
+
+import Following from '../Following/Following';
+import Followers from '../Followers/Followers';
 import Repositores from '../Repositoires/Repositores';
 import * as profileActions from '../../actions/profileActions';
+import * as routeUrls from '../../constants/route';
+
 
 import '../../style/style.scss';
 import '../../style/reset.scss';
@@ -49,8 +54,12 @@ function Main(props) {
             <p>Laoding.....</p>
             :
             <>
-              <Route path="/" component={Profile} />
-              <Route path="/" component={Repositores} />
+              <Profile />
+              <Switch>
+                <Route path={routeUrls.BASE} exact component={Repositores} />
+                <Route path={routeUrls.FOLLOWERS} exact component={Followers} />
+                <Route path={routeUrls.FOLLOWING} exact component={Following} />
+              </Switch>
             </>
           }
 

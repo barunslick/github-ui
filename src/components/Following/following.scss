@@ -1,0 +1,21 @@
+@import '../../style/base';
+
+.Following{
+  overflow: hidden;
+  margin-top: 40px;
+
+  @include mq(md){
+    flex: 2;
+    margin-left: 60px;
+    margin-top: 0px;
+  }
+
+  @include e (heading){
+    white-space: nowrap;
+    color: $ash-gray;
+  }
+
+  @include e(list-container){
+    margin-top: 32px;
+  }
+}

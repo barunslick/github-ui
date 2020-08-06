@@ -2,8 +2,8 @@ import * as profileActions from '../actions/profileActions';
 
 const INITIAL_STATE = {
   data: {},
-  followers: {},
-  following: {}
+  followers: [],
+  following: []
 };
 
 /**

@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 import fetchContent from '../../services/githubApi';
 import * as profileActions from '../../actions/profileActions';
+import * as routeUrls from '../../constants/route';
 
 import './Socials.scss';
 
@@ -46,19 +48,27 @@ function Socials(props) {
     }
 
     // eslint-disable-next-line
-  }, [ followersUrl, followingUrl ]);
+  }, [followersUrl, followingUrl]);
 
 
 
   return (
     <div className="Socials">
       <div className="Socials__followers">
-        <p><span className="spray">{followersCount}</span> Followers</p>
-      </div>
+        <p>
+          <Link to={routeUrls.FOLLOWERS}>
+            <span className="spray">{followersCount}</span> Followers
+          </Link>
+        </p>
+      </div >
       <div className="Socials__following">
-        <p><span className="spray">{followingCount}</span> Following</p>
+        <p>
+          <Link to={routeUrls.FOLLOWING}>
+            <span className="spray">{followingCount}</span> Following
+          </Link>
+        </p>
       </div>
-    </div>
+    </div >
   );
 }
 
