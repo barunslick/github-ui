@@ -43,7 +43,7 @@ function Repositores(props) {
     <div className="Repositories">
       <span className="Repositories__heading"> {`// Repositories ---------------------------------------------------------------------------------------------------------------------------------`}</span>
       {isLoading ?
-        <p style={ { color: 'red' } }>Loading....</p>
+        <p>Loading....</p>
         :
         <div className = "Repositories__list-container">
           { reposData.map( item=> <RepositoryListItem key={item.id} item={item}/>) }
