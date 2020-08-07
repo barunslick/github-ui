@@ -15,10 +15,10 @@ html,body{
   margin-bottom: 40px;
 
   @include mq(md){
-    width: 70%;
+    width: 80%;
   }
 
-  @include mq(lg){
+  @include mq(xl){
     width: 50%;
   }
   
