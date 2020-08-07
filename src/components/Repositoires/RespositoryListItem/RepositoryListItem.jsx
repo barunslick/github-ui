@@ -17,6 +17,11 @@ function RepositoryListItem(props) {
       <div className="Repository-list__title">
         <a href={props.item.html_url} title={props.item.name}>{props.item.name}</a>
       </div>
+      {props.item.description &&
+        <div className="Repository-list__description">
+          {props.item.description}
+        </div>
+      }
       <div className="Repository-list__details">
         {props.item.language &&
           <div className="Repository-list__language">

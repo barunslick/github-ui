@@ -5,6 +5,10 @@
   margin-top: 48px;
   display: flex;
 
+  &:first-child{
+    margin-top: 0px;
+  }
+
   @include e(avatar-holder){
     width: 60px;
   }

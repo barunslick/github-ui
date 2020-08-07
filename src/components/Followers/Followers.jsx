@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import './followers.scss';
-import FollowerListItem from './FollowerListItem/FollowerLIstItem';
+import FollowerListItem from './FollowerListItem/FollowerListItem';
 
 /**
  * Shows the followers of the user account.

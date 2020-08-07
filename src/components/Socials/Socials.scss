@@ -16,4 +16,10 @@
     color: $spray;
     font-size: 16px;
   }
+
+  a{
+    &:hover{
+      color: lighten($color: $spray, $amount: 20%);
+    }
+  }
 }

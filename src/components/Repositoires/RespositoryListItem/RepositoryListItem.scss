@@ -1,7 +1,7 @@
 @import '../../../style/base';
 
 .Repository-list{
-  margin-top: 48px;
+  margin-top: 64px;
 
   &:first-child{
     margin-top: 0px;
@@ -18,7 +18,7 @@
   }
 
   @include e(details){
-    margin-top: 18px;
+    margin-top: 22px;
     display: flex;
     &>div{
       margin-right: 20px;
@@ -28,6 +28,16 @@
   @include e(language){
     color: $spray;
     text-transform: capitalize;
+  }
+
+  @include e(description){
+    margin-top: 10px;
+    font-size: 13px;
+    color: $gray;
+  }
+
+  @include e(update-time){
+    color: $gray;
   }
 
 }

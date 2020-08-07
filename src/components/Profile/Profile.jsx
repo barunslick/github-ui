@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import './profile.scss';
 import Avatar from '../Avatar/Avatar';
 import Socials from '../Socials/Socials';
 import Contacts from '../Contacts/Contacts';
+import * as routeUrls from '../../constants/route';
 
 /**
  * Shows the user avatar along with details such as name, followers, and other details.
@@ -24,7 +26,9 @@ function Profile(props) {
         <Avatar className="Profile__avatar" />
       </div>
       <div className="Profile__user-details">
-        <h1 className="Profile__user-name"> <a href = {url}>{name}</a> </h1>
+        <Link to={routeUrls.BASE}>
+          <h1 className="Profile__user-name">{name}</h1>
+        </Link>
         <p className="Profile__user-id"> <a href = {url}>{gitId}</a> </p>
       </div>
       <Socials />
