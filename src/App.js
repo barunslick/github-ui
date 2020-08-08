@@ -1,7 +1,6 @@
 import React from 'react';
-import Main from './components/Main/Main';
 
-import './App.css';
+import Main from './components/main/Main';
 
 /**
  * Main App wrapper.

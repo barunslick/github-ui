@@ -1,7 +1,7 @@
 import * as repoActions from '../actions/repoActions';
 
 const INITIAL_STATE = {
-  reposData: []
+  reposData: [],
 };
 
 /**
