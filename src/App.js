@@ -1,11 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
+import Main from './components/main/Main';
+
+/**
+ * Main App wrapper.
+ * 
+ * @returns {JSX} 
+ */
 function App() {
   return (
-    <>
-    </>
+    <Main />
   );
 }
 
