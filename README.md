@@ -1,2 +1,9 @@
-Giving a different look to github repos page. 
-Done using React and redux.
+# Test Data Generator
+Contents:
+- [About] (#about)
+- [Installation] (#installation)
+- [Usage] (#usage)
+
+### About
+### Installation
+### Usage
